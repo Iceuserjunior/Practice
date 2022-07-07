@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mypart1/Color.dart';
+import 'package:mypart1/Homepage/Screen/headscreen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -7,51 +8,35 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
-        children: <Widget>[Headerscreen(size: size)],
+        children: <Widget>[
+          Headerscreen(size: size),
+          Middledesign(
+            texthead: "Recomended",
+          ),
+        ],
       ),
     );
   }
 }
 
-class Headerscreen extends StatelessWidget {
-  const Headerscreen({
+class Middledesign extends StatelessWidget {
+  const Middledesign({
     Key key,
-    @required this.size,
+    this.texthead,
   }) : super(key: key);
-
-  final Size size;
+  final String texthead;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: size.height * 0.2,
+      height: 24,
       child: Stack(
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(
-              left: kDefaultPadding,
-              right: kDefaultPadding,
-              bottom: 30 + kDefaultPadding,
-            ),
-            height: size.height * 0.2 - 27,
-            decoration: BoxDecoration(
-              color: kPrimaryColor,
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(36),
-                  bottomRight: Radius.circular(36)),
-            ),
-            child: Row(
-              children: <Widget>[
-                Text('Hello MyAPP ICE',
-                    style: Theme.of(context).textTheme.headline5.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold)),
-                Spacer(),
-                Icon(
-                  Icons.icecream_sharp,
-                  size: 55,
-                  color: Colors.black54,
-                ),
-              ],
+          Padding(
+            padding: const EdgeInsets.only(left: kDefaultPadding / 4),
+            child: Text(
+              texthead,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
           Positioned(
@@ -59,38 +44,9 @@ class Headerscreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-              padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-              height: 54,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                        offset: Offset(0, 10),
-                        blurRadius: 50,
-                        color: kPrimaryColor.withOpacity(0.23))
-                  ]),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "Search",
-                        hintStyle:
-                            TextStyle(color: kPrimaryColor.withOpacity(0.5)),
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                  Icon(
-                    Icons.search,
-                    color: Colors.red,
-                  ),
-                ],
-              ),
+              margin: EdgeInsets.only(left: kDefaultPadding / 4),
+              height: 7,
+              color: kPrimaryColor.withOpacity(0.2),
             ),
           )
         ],
