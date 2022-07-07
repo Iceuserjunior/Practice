@@ -76,7 +76,7 @@ class Headerscreen extends StatelessWidget {
                   ),
                   Icon(
                     Icons.search,
-                    color: Colors.red,
+                    color: kPrimaryColor,
                   ),
                 ],
               ),
