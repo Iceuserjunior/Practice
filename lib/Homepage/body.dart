@@ -14,6 +14,12 @@ class Body extends StatelessWidget {
             title: 'Recomended',
             press: () {},
           ),
+          Container(
+            width: size.width * 0.4,
+            child: Column(
+              children: <Widget>[Image.asset("images/ice_1.jpg")],
+            ),
+          )
         ],
       ),
     );
