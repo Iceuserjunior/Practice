@@ -27,6 +27,13 @@ class RecomenMenu extends StatelessWidget {
             press: () {},
           ),
           MenuLilt(
+            image: "assets/images/ice_3.jpg",
+            title: "IceCream",
+            country: "chocolates",
+            price: 110,
+            press: () {},
+          ),
+          MenuLilt(
             image: "assets/images/ice_4.jpg",
             title: "IceScram",
             country: "set black \n& white",
@@ -66,7 +73,8 @@ class MenuLilt extends StatelessWidget {
         children: <Widget>[
           Image.asset(
             image,
-            height: MediaQuery.of(context).size.height * 0.15,
+            height: 100,
+            width: 150,
           ),
           GestureDetector(
             onTap: press,
