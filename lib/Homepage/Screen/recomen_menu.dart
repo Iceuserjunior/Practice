@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mypart1/Color.dart';
+import 'package:mypart1/Homepage/Screen_item/data_icecream.dart';
 
 class RecomenMenu extends StatelessWidget {
   const RecomenMenu({
@@ -17,7 +19,13 @@ class RecomenMenu extends StatelessWidget {
             title: "IceScram",
             country: "purple  potato",
             price: 150,
-            press: () {},
+            press: () {
+              Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => DataIceCream(),
+                  ));
+            },
           ),
           MenuLilt(
             image: "assets/images/ice_2.jpg",

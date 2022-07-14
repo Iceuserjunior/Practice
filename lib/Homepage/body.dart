@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mypart1/Color.dart';
 import 'package:mypart1/Homepage/Screen/headscreen.dart';
 import 'package:mypart1/Homepage/Screen/recomen_menu.dart';
 import 'package:mypart1/Homepage/Screen/title_recomended.dart';
