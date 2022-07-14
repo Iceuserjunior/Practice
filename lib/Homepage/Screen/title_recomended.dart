@@ -19,16 +19,6 @@ class TitleRecomended extends StatelessWidget {
           Middledesign(
             texthead: title,
           ),
-          Spacer(),
-          FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              color: kPrimaryColor,
-              onPressed: press,
-              child: Text(
-                "More",
-                style: TextStyle(color: Colors.white),
-              )),
         ],
       ),
     );
